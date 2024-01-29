@@ -9,3 +9,11 @@ function distanceFromHqInBlocks(n) {
 function distanceFromHqInFeet(n) {
     return distanceFromHqInBlocks(n) * 264
 }
+
+function distanceTravelledInFeet(n1, n2) {
+    if (n2 < n1) {
+        return (n1-n2)*264
+    } else {
+    return (n2-n1)*264
+    }
+}
