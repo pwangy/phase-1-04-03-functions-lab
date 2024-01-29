@@ -19,12 +19,13 @@ function distanceTravelledInFeet(n1, n2) {
 }
 
 function calculatesFarePrice(n1, n2) {
-    if (distanceTravelledInFeet(n1, n2) < 400) {
+    const distance = distanceTravelledInFeet(n1, n2)
+
+    if (distance < 400) {
         return 0
-    } else if ((distanceTravelledInFeet(n1, n2) >= 401 && distanceTravelledInFeet(n1, n2) <= 2000)) {
-        const getFare = (distanceTravelledInFeet(n1, n2) - 400) * 0.02
-        return getFare
-    } else if ((distanceTravelledInFeet(n1, n2) >= 2001 && (distanceTravelledInFeet(n1, n2) <= 2500))){
+    } else if (distance >= 401 && distance <= 2000) {
+        return ((distance - 400) * 0.02)
+    } else if (distance >= 2001 && distance <= 2500) {
         return 25
     } else {
     return 'cannot travel that far'
